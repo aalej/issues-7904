@@ -1,0 +1,28 @@
+{
+  "functions": [
+    {
+      "source": "functions/codebaseA",
+      "codebase": "codebase-a",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run lint"]
+    },
+    {
+      "source": "functions/codebaseB",
+      "codebase": "codebase-b",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run lint"]
+    }
+  ]
+}
